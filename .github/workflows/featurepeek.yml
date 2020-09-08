@@ -9,5 +9,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 12.x
+    - name: Install dependencies
+      run: yarn
+    - name: Build
+      run: yarn build
     - name: Ping FeaturePeek
       run: bash <(curl -s https://peek.run/ci)
